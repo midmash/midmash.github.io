@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+
+		<link rel="stylesheet" href="css/map.css">
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<link rel="stylesheet" type="text/css" href="css/reddit.css" />
+
+		<script type="text/javascript" src="java/reddit.js"></script>
+		<script type="text/javascript"
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtlG8E958PWlxQ1qHw38PmYymXfIjSpww&sensor=true"></script>
+		<script type="text/javascript" src="java/map.js"></script>
+	</head>
+	<body>
+		<header>
+			<h1> Reddit Finder </h1>
+			<h3> Find Fun Reddits from your Location! </h3>
+		</header>
+
+		<img src="happyalien.jpg"/>
+		<img src="sadalien.jpg"/>
+
+		<div>
+			<input id="address" type="textbox" value="Decorah, IA">
+			<input type="button" value="Look!"  class="styled-button" onclick="codeAddress()">
+			<input type="button" value="Get Reddits!" class="styled-button" onclick="lookForReddits()">
+		</div>
+
+	</body>
+</html>
