@@ -38,6 +38,6 @@ clearHighlights = function() {
 	}
 }*/
 
-/*function lookForReddits() {
+function lookForReddits() {
 	bd.getRedditsAndUpdateFeed(map.getCenter().lat(), map.getCenter().lng(), 1)*/
 }
