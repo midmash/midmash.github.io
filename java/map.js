@@ -1,3 +1,4 @@
+console.log("bob");
 var geocoder;
 var map;
 
