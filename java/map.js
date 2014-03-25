@@ -39,5 +39,6 @@ clearHighlights = function() {
 }*/
 
 function lookForReddits() {
-	bd.getRedditsAndUpdateFeed(map.getCenter().lat(), map.getCenter().lng(), 1)*/
+	bd.getRedditsAndUpdateFeed(map.getCenter().lat(), map.getCenter().lng(), 1)
 }
+google.maps.event.addDomListener(window, 'load', initialize)
