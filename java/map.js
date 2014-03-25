@@ -1,6 +1,5 @@
 var geocoder;
 var map;
-var markers = new Array();
 
 initialize = function() {
 	geocoder = new google.maps.Geocoder();
@@ -15,7 +14,7 @@ initialize = function() {
 
 }
 
-function codeAddress() {
+function mapAddress() {
 	var address = document.getElementById('address').value;
 	geocoder.geocode({
 		'address' : address
