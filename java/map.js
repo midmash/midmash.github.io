@@ -24,7 +24,7 @@ function mapAddress() {
 			map.setZoom(13);
 			lookForReddits();
 		} else {
-			alert('Geocode was not successful because: ' + status);
+			alert('Search was not successful because: ' + status);
 		}
 	});
 }
