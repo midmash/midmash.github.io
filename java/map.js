@@ -30,15 +30,6 @@ function codeAddress() {
 	});
 }
 
-// Deletes all markers in the array by removing references to them
-function deleteMarkers() {
-	if (markers) {
-		for (var i = 0; i < markers.length; i++) {
-			markers[i].setMap(null);
-		}
-		markers.length = 0;
-	}
-}
 
 /*Clears the highlighting on all the tweets in the feed.
 clearHighlights = function() {
