@@ -11,6 +11,17 @@
 		<script type="text/javascript"
 		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBOdwbrwW6Howv0hZFKTo3pNyu2lBo9K0E&sensor=true"></script>
 		<script type="text/javascript" src="java/map.js"></script>
+		<script type="text/javascript">
+      			function initialize() {
+				var mapOptions = {
+          				center: new google.maps.LatLng(-34.397, 150.644),
+          				zoom: 8
+        			};
+        			var map = new google.maps.Map(document.getElementById("map-canvas"),
+        				mapOptions);
+      				}
+      		google.maps.event.addDomListener(window, 'load', initialize);
+	 	</script>
 	</head>
 	<body>
 		<header>
@@ -25,7 +36,8 @@
 			<input id="address" type="textbox" value="Decorah, IA">
 			<input type="button" value="Look!"  class="styled-button" onclick="codeAddress()">
 			<input type="button" value="Get Reddits!" class="styled-button" onclick="lookForReddits()"> </n>
-			<img src="http://maps.googleapis.com/maps/api/staticmap?center=Decorah,IA&zoom=12&size=450x450&sensor=false">
+		
+			//<img src="http://maps.googleapis.com/maps/api/staticmap?center=Decorah,IA&zoom=12&size=450x450&sensor=false">
 		</div>
 
 	</body>
