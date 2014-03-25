@@ -3,7 +3,7 @@ var map;
 
 initialize = function() {
 	geocoder = new google.maps.Geocoder();
-	var latlng = new google.maps.LatLng("Decorah,IA");
+	var latlng = new google.maps.LatLng(-38.397, 150.644);
 	var mapOptions = {
 		center : latlng,
 		zoom : 8,
