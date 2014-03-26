@@ -1,27 +1,12 @@
  
 var config = {
- apiKey: ,
+ apiKey: 'XXXXXXXXXXXXXX',
  authURL: 'https://foursquare.com/',
  apiURL: 'https://api.foursquare.com/'
 };
 
-function doAuthRedirect() {
-    var redirect = window.location.href.replace(window.location.hash, '');
-    var url = config.authUrl + 'oauth2/authenticate?response_type=token&client_id=' + config.apiKey +
-        '&redirect_uri=' + encodeURIComponent(redirect) +
-        '&state=' + encodeURIComponent($.bbq.getState('req') || 'users/self');
-    window.location.href = url;
-  };
-  
- if ($.bbq.getState('access_token')) {
-    // If there is a token in the state, consume it
-    var token = $.bbq.getState('access_token');
-    $.bbq.pushState({}, 2)
-  } else if ($.bbq.getState('error')) {
-  } else {
-    doAuthRedirect();
-  }
-  
+window.location.hash
+
    /* HTML 5 geolocation. */
   navigator.geolocation.getCurrentPosition(function(data) {
     var lat = data['coords']['latitude'];
