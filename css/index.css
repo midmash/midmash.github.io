@@ -6,7 +6,7 @@
 	background: -o-linear-gradient(top,black 0%,#188BC0 100%);
 	background: -ms-linear-gradient(top,black 0%,#188BC0 100%);
 	background: linear-gradient(top,black 0%,#188BC0 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=white,endColorstr=white,GradientType=0);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=black,endColorstr=black,GradientType=0);
 	padding: 3px 5px;
 	color: purple;
 	font-family: Copperplate, Verdana;
