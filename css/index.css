@@ -1,11 +1,11 @@
 .styled-button {
 	background: black;
-	background: -moz-linear-gradient(top,black 0%,#188BC0 100%);
-	background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,black),color-stop(100%,#188BC0));
-	background: -webkit-linear-gradient(top,black 0%,#188BC0 100%);
-	background: -o-linear-gradient(top,black 0%,#188BC0 100%);
-	background: -ms-linear-gradient(top,black 0%,#188BC0 100%);
-	background: linear-gradient(top,black 0%,#188BC0 100%);
+	background: -moz-linear-gradient(top,white 0%,white 100%);
+	background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,white),color-stop(100%,white));
+	background: -webkit-linear-gradient(top,white 0%,white 100%);
+	background: -o-linear-gradient(top,white 0%,white 100%);
+	background: -ms-linear-gradient(top,white 0%,white 100%);
+	background: linear-gradient(top,white 0%,white 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=black,endColorstr=black,GradientType=0);
 	padding: 3px 5px;
 	color: purple;
