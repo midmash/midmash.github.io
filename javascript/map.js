@@ -21,7 +21,7 @@ function mapAddress() {
 		if (status == google.maps.GeocoderStatus.OK) {
 			map.setCenter(results[0].geometry.location);
 			map.setZoom(13);
-			lookForReddits();
+			lookForFun();
 		} else {
 			alert('Search was not successful because: ' + status);
 		}
@@ -37,7 +37,7 @@ clearHighlights = function() {
 	}
 }*/
 
-function lookForReddits() {
-	bd.getRedditsAndUpdateFeed(map.getCenter().lat(), map.getCenter().lng(), 1)
+function lookForFun() {
+	bd.getFunAndUpdate(map.getCenter().lat(), map.getCenter().lng(), 1)
 }
 google.maps.event.addDomListener(window, 'load', initialize);
