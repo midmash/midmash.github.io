@@ -1,9 +1,7 @@
-console.log("bob");
 var geocoder;
 var map;
 
 initialize = function() {
-	console.log("dog");
 	geocoder = new google.maps.Geocoder();
 	var latlng = new google.maps.LatLng("Decorah,IA");
 	var mapOptions = {
@@ -13,7 +11,6 @@ initialize = function() {
 	}
 
 	map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions)
-	console.log("cat");
 }
 
 function mapAddress() {
