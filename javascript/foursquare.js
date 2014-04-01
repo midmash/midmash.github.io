@@ -31,7 +31,6 @@ function lookForFun() {
         	position: latLngthree,
         	title:"Marker"
         }
-        map = new google.maps.Map(document.getElementById("map-canvas"));
           /*.bindPopup(venues[i]['venue']['name'], { closeButton: false })
           .on('mouseover', function(e) { this.openPopup(); })
           .on('mouseout', function(e) { this.closePopup(); });*/
