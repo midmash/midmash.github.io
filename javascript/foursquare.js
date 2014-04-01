@@ -1,4 +1,5 @@
 var geocodertwo; 
+var map;
  
 var config = {
  apiKey: '1PYYLFDJI5YVYXGYCNQE4UJPB1N1B1CSZHK4LGYO0BJPEWQ2',
