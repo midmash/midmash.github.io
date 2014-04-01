@@ -7,10 +7,9 @@ var config = {
 };
   
 /* Attempt to retrieve access token from URL. */
-/*  function doAuthRedirect() {
+  function doAuthRedirect() {
     var redirect = window.location.href.replace(window.location.hash, '');
-    var url = config.authUrl + 'oauth2/authenticate?response_type=token&client_id=' + config.apiKey +
-        '&redirect_uri=' + encodeURIComponent(redirect) +
+    var url = 'https://foursquare.com/oauth2/authenticate?response_type=token&client_id=1PYYLFDJI5YVYXGYCNQE4UJPB1N1B1CSZHK4LGYO0BJPEWQ2&redirect_uri=' + encodeURIComponent(redirect) +
         '&state=' + encodeURIComponent($.bbq.getState('req') || 'users/self');
     window.location.href = url;
   };
@@ -22,7 +21,7 @@ var config = {
   } else if ($.bbq.getState('error')) {
   } else {
     doAuthRedirect();
-  }*/
+  }
   
 function lookForFun() { 
 	geocodertwo = new google.maps.Geocoder();
