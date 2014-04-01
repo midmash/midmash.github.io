@@ -12,7 +12,7 @@ function getVenue() {
 	request.onreadystatechange = function() {
 		if (request.readyState == 4 && request.status==200);
 		{
-			var A = JSON.parse(request.responseText);
+			var A = JSON.parse(request.responseText());
 			console.log(A);
 		}
 	}
