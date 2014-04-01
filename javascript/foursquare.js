@@ -37,5 +37,5 @@ function lookForFun() {
         marker.setMap(map);
       }
     })
-  })
+  }
   
