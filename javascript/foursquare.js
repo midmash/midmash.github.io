@@ -4,19 +4,10 @@ var config = {
  authURL: 'https://foursquare.com/',
  apiURL: 'https://api.foursquare.com/'
 };
-
-var geocoder;
-var map;
- //window.location.hash
-  
-function getFun(){
-	var lat = document.getElementById("input-lat").value;
-	var long = document.getElementById("input-long").value;
-	var radius = document.getElementById("input-radius").value;
-	bd.getFunAndUpdateFeed(lat, long, radius);
-}
   
 function lookForFun() { 
+	var lat = document.getElementById("input-lat").value;
+	var lng = document.getElementById("input-long").value;
   /* Query foursquare API for venue recommendations near the current location. */
     $.getJSON(config.apiUrl + 'v2/venues/explore?ll=' + lat + ',' + lng + '&oauth_token=' + window.token, {}, function(data) {
       venues = data['response']['groups'][0]['items'];
