@@ -14,10 +14,7 @@ function lookForFun() {
       /* Place marker for each venue. */
       for (var i = 0; i < venues.length; i++) {
         /* Get marker's location */
-        var latLng = new L.LatLng(
-          venues[i]['venue']['location']['lat'],
-          venues[i]['venue']['location']['lng']
-        );
+        var latLng = new google.maps.LatLng(venues[i]['venue']['location']['lat'], venues[i]['venue']['location']['lng']);
         /* Build icon for each icon */
         var leafletIcon = L.Icon.extend({
           iconUrl: venues[i]['venue']['categories'][0]['icon'],
