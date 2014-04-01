@@ -1,5 +1,4 @@
 var geocodertwo; 
-var map;
  
 var config = {
  apiKey: '1PYYLFDJI5YVYXGYCNQE4UJPB1N1B1CSZHK4LGYO0BJPEWQ2',
@@ -31,7 +30,7 @@ function lookForFun() {
         var marker = new google.maps.Marker({
         	position: latLngthree,
         	title:"Marker"
-        }
+        });
           /*.bindPopup(venues[i]['venue']['name'], { closeButton: false })
           .on('mouseover', function(e) { this.openPopup(); })
           .on('mouseout', function(e) { this.closePopup(); });*/
