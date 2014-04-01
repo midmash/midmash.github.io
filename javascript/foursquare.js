@@ -22,7 +22,7 @@ var config = {
   } else if ($.bbq.getState('error')) {
   } else {
     doAuthRedirect();
-  }  
+  }
   
 function lookForFun() { 
 	geocodertwo = new google.maps.Geocoder();
