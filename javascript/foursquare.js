@@ -16,6 +16,7 @@ var config = {
   };
  
   if ($.bbq.getState('access_token')) {
+  	ladidadida
     // If there is a token in the state, consume it
     var token = $.bbq.getState('access_token');
     $.bbq.pushState({}, 2)
