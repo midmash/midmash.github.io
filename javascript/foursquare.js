@@ -10,7 +10,7 @@ function lookForFun() {
 	geocodertwo = new google.maps.Geocoder();
 	var latlngtwo = new google.maps.LatLng(document.getElementById('address').value);
 	var lat = latlngtwo.lat();
-	val lng = latlngtwo.lng();
+	var lng = latlngtwo.lng();
   /* Query foursquare API for venue recommendations near the current location. */
     $.getJSON(config.apiUrl + 'v2/venues/explore?ll=' + lat + ',' + lng + '&oauth_token=' + window.token, {}, function(data) {
       venues = data['response']['groups'][0]['items'];
