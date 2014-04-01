@@ -1,4 +1,4 @@
-var geocodertwo; 
+/*var geocodertwo; 
  
 var config = {
  apiKey: '1PYYLFDJI5YVYXGYCNQE4UJPB1N1B1CSZHK4LGYO0BJPEWQ2',
@@ -23,7 +23,7 @@ var config = {
   } else {
     doAuthRedirect();
   }*/
-  
+/*  
 function getVenue() {
 	var request = new XMLHttpRequest();
 	var URL = "https://api.foursquare.com/v2/venues/search?near=Decorah,IA&client_id=1PYYLFDJI5YVYXGYCNQE4UJPB1N1B1CSZHK4LGYO0BJPEWQ2&client_secret=WLK1VTXZKQ41GGOI1BZUECIA0UT00QSADMBBKKCIS5VCE5IW&v=20140401";
@@ -44,14 +44,14 @@ function lookForFun() {
 	var lat = latlngtwo.lat();
 	var lng = latlngtwo.lng();
   /* Query foursquare API for venue recommendations near the current location. */
-    $.getJSON(config.apiUrl + 'v2/venues/explore?ll=' + lat + ',' + lng + '&oauth_token=' + window.token, {}, function(data) {
+ /*   $.getJSON(config.apiUrl + 'v2/venues/explore?ll=' + lat + ',' + lng + '&oauth_token=' + window.token, {}, function(data) {
       venues = data['response']['groups'][0]['items'];
       /* Place marker for each venue. */
-      for (var i = 0; i < venues.length; i++) {
+ /*     for (var i = 0; i < venues.length; i++) {
         /* Get marker's location */
-        var latLngthree = new google.maps.LatLng(venues[i]['venue']['location']['lat'], venues[i]['venue']['location']['lng']);
+/*        var latLngthree = new google.maps.LatLng(venues[i]['venue']['location']['lat'], venues[i]['venue']['location']['lng']);
         /* Build icon for each icon */
-        var leafletIcon = L.Icon.extend({
+/*        var leafletIcon = L.Icon.extend({
           iconUrl: venues[i]['venue']['categories'][0]['icon'],
           shadowUrl: null,
           iconSize: new L.Point(32,32),
@@ -66,7 +66,7 @@ function lookForFun() {
           /*.bindPopup(venues[i]['venue']['name'], { closeButton: false })
           .on('mouseover', function(e) { this.openPopup(); })
           .on('mouseout', function(e) { this.closePopup(); });*/
-        marker.setMap(map);
+  /*      marker.setMap(map);
       }
     })
   }
