@@ -34,7 +34,7 @@ function lookForFun() {
           /*.bindPopup(venues[i]['venue']['name'], { closeButton: false })
           .on('mouseover', function(e) { this.openPopup(); })
           .on('mouseout', function(e) { this.closePopup(); });*/
-        marker.setMap(map);
+        marker.setMap(document.getElementById("map-canvas"));
       }
     })
   })
