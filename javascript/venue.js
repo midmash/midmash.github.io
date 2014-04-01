@@ -18,4 +18,4 @@ function getVenue() {
 	}
 	request.open("GET",URL,true);
 	request.send();
-}  
+};  
