@@ -1,6 +1,6 @@
  
 var config = {
- apiKey: 'XXXXXXXXXXXXXX',
+ apiKey: '1PYYLFDJI5YVYXGYCNQE4UJPB1N1B1CSZHK4LGYO0BJPEWQ2',
  authURL: 'https://foursquare.com/',
  apiURL: 'https://api.foursquare.com/'
 };
