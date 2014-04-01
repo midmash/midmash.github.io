@@ -6,6 +6,24 @@ var config = {
  apiURL: 'https://api.foursquare.com/'
 };
   
+/* Attempt to retrieve access token from URL. */
+  function doAuthRedirect() {
+    var redirect = window.location.href.replace(window.location.hash, '');
+    var url = config.authUrl + 'oauth2/authenticate?response_type=token&client_id=' + config.apiKey +
+        '&redirect_uri=' + encodeURIComponent(redirect) +
+        '&state=' + encodeURIComponent($.bbq.getState('req') || 'users/self');
+    window.location.href = url;
+  };
+ 
+  if ($.bbq.getState('access_token')) {
+    // If there is a token in the state, consume it
+    var token = $.bbq.getState('access_token');
+    $.bbq.pushState({}, 2)
+  } else if ($.bbq.getState('error')) {
+  } else {
+    doAuthRedirect();
+  }  
+  
 function lookForFun() { 
 	geocodertwo = new google.maps.Geocoder();
 	var latlngtwo = new google.maps.LatLng(document.getElementById('address').value);
