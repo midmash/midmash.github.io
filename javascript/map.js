@@ -37,7 +37,4 @@ clearHighlights = function() {
 	}
 }*/
 
-function lookForFun() {
-	bd.getFunAndUpdate(map.getCenter().lat(), map.getCenter().lng(), 1)
-}
 google.maps.event.addDomListener(window, 'load', initialize);
