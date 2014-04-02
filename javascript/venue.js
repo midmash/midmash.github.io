@@ -22,17 +22,18 @@ function getVenue() {
         			var marker = new google.maps.Marker({
         				position: new google.maps.LatLng(lat, lng),
         				title:"Marker",
+        				iconURL: A['venues'][i]['categories'][0]['icon']
 					 })
 					 
 				marker.setMap(map);
 				
-				google.maps.event.addListener(marker, "mouseover", function(event) {
+				/*google.maps.event.addListener(marker, "mouseover", function(event) {
                             		this.setIcon(A["response"]["venues"][i]["stats"]["checkinsCount"]);
                         	});
 
                             	google.maps.event.addListener(marker, "mouseout", function(event) {
                             		this.setIcon(A["response"]["venues"][i]["hereNow"]["count"]);
-                            	});
+                            	});*/
 			}
 		}
 					
