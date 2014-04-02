@@ -1,3 +1,4 @@
+var venueName;
 var checkIns;
 var hereNow;
 
