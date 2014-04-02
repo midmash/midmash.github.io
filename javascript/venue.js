@@ -33,10 +33,10 @@ function getVenue() {
 				content: "Venue Name: " + venueName + "\n" + "Number of Check-In's: " + checkIns + "\n" + "Number of Users to Check-In Here: " + userChecks
 			})
 			
-			google.maps.event.addListener(marker, 'mouseover', function(event) {
+			google.maps.event.addListener(marker, 'click', function(event) {
     				map.setZoom(8);
-				map.setCenter(marker.getPosition());
-				infowindow.open(map, marker);
+				//map.setCenter(marker.getPosition());
+				infowindow.open(marker);
   					
   					//document.getElementById("venue-recs").innerHTML = "Venue Name: " + "<br>" + venueName + "<br>" + "<br>" + "Number of Check-Ins: " + "<br>" + checkIns + "<br>" + "<br>" + "Number of Users to Check-In Here: " + "<br>" + userChecks;
   				});
