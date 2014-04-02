@@ -25,11 +25,11 @@ function getVenue() {
 				marker.setMap(map);
 				
 				google.maps.event.addListener(marker, "mouseover", function(event) {
-                            		this.setIcon(A["response"]["venues"][i]["categories"][0]["icon"]["prefix" + "suffix"]);
+                            		this.setIcon(A["response"]["venues"][i]["categories"][0]["icon"]);
                         	});
 
-                            	/*google.maps.event.addListener(marker, "mouseout", function(event) {
-                            		this.setIcon(marker);
+                            	google.maps.event.addListener(marker, "mouseout", function(event) {
+                            		this.setIcon("Marker");
                             	});*/
 			}
 		}
