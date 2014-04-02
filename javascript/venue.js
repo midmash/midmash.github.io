@@ -41,9 +41,9 @@ function getVenue() {
 					var hereNow = A["response"]["venues"][i]["hereNow"]["count"];
   					console.log(hereNow);
   					
-  					document.getElementById("venue-recs").innerHTML = "Name of Venue: " + venueName;
-  					document.getElementById("venue-recs").innerHTML = "Number of Check-Ins:  " + checkIns;
-  					document.getElementById("venue-recs").innerHTML = "Number of People Here Now: " + hereNow;
+  					document.getElementById("venue-recs").innerHTML = "Name of Venue: " + venueName + /n + "Number of Check-Ins:  " + checkIns + /n + "Number of People Here Now: " + hereNow;
+  					//document.getElementById("venue-recs").innerHTML = "Number of Check-Ins:  " + checkIns;
+  					//document.getElementById("venue-recs").innerHTML = "Number of People Here Now: " + hereNow;
   				});
   				
 				
