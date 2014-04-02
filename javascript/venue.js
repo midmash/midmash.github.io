@@ -28,11 +28,11 @@ function getVenue() {
 					 
 				marker.setMap(map);
 				map.setCenter(marker.getPosition());
-			
-				var infowindow = new google.maps.InfoWindow({
-					content: "Venue Name: " + venueName + "\n" + "Number of Check-In's: " + checkIns + "\n" + "Number of Users to Check-In Here: " + userChecks
-				})
 			}
+			var infowindow = new google.maps.InfoWindow({
+				content: "Venue Name: " + venueName + "\n" + "Number of Check-In's: " + checkIns + "\n" + "Number of Users to Check-In Here: " + userChecks
+			})
+			
 			google.maps.event.addListener(marker, 'mouseover', function(event) {
     				map.setZoom(8);
 				map.setCenter(marker.getPosition());
