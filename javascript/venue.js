@@ -19,10 +19,11 @@ function getVenue() {
           				iconAnchor: new L.Point(16, 41),
         				popupAnchor: new L.Point(0, -51)
 					});*/
+        			var newicon = A["response"]['venues'][i]['categories'][0]['icon']
         			var marker = new google.maps.Marker({
         				position: new google.maps.LatLng(lat, lng),
         				title:"Marker",
-        				icon: A["response"]['venues'][i]['categories'][0]['icon']
+        				icon: newicon
 					 })
 					 
 				marker.setMap(map);
