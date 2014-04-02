@@ -5,7 +5,7 @@ function getVenue() {
 		if (request.readyState == 4 && request.status==200);
 		{
 			var A = JSON.parse(request.responseText);
-			for (int i = 0; i < 10; i++) {
+			for (var i = 0; i < 10; i++) {
 			console.log(A["response"]["venues"][i]["name"]);	
 			}
 		}
