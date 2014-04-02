@@ -28,7 +28,7 @@ function getVenue() {
 					 
 				marker.setMap(map);
 				
-				google.maps.event.addListener(marker, 'mouseover', function(event) {
+				google.maps.event.addListener(marker, 'click', function(event) {
     					map.setZoom(8);
 					map.setCenter(marker.getPosition());
 					
@@ -45,10 +45,6 @@ function getVenue() {
   					//document.getElementById("venue-recs").innerHTML = checkIns;
   					//document.getElementById("venue-recs").innerHTML = hereNow;
   				});
-  				
-  				google.maps.event.addListener(marker, 'mouseout', function(event) {
-  					document.getElementById("venue-recs").innerHTML = "Find Some Fun!"
-  				}
   				
 				
 				/*google.maps.event.addListener(marker, "mouseover", function(event) {
