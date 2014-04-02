@@ -33,10 +33,16 @@ function getVenue() {
 				
 				//infowindow.open(map, marker);
 			}
-			google.maps.event.addListener(marker, "mouseover", function(event) {
-				infowindow.open(map, marker);
-			}
 			
+			google.maps.event.addListener(marker, "mouseover", function(event) ({
+				infowindow.open(map, marker);
+			})
+		}
+	}
+	request.open("GET",URL,true);
+	request.send();
+}
+
 			//infowindow.open(map, marker);
 			
 			//google.maps.event.addListener(marker, 'click', function(event) {
@@ -59,9 +65,3 @@ function getVenue() {
                             		this.setIcon(A["response"]["venues"][i]["hereNow"]["count"]);
                             	});*/
 			
-		
-					
-	}
-	request.open("GET",URL,true);
-	request.send();
-}
