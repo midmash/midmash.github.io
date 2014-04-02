@@ -23,7 +23,7 @@ function getVenue() {
         			
         			var marker = new google.maps.Marker({
         				position: new google.maps.LatLng(lat, lng),
-        				title:"Marker",
+        				title: venueName,
 					 })
 					 
 				marker.setMap(map);
