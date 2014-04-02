@@ -27,6 +27,7 @@ function getVenue() {
 					 })
 					 
 				marker.setMap(map);
+				map.setCenter(marker.getPosition());
 				
 				google.maps.event.addListener(marker, 'click', function(event) {
     					map.setZoom(8);
