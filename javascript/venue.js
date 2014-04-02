@@ -5,8 +5,7 @@ function getVenue() {
 		if (request.readyState == 4 && request.status==200);
 		{
 			var A = JSON.parse(request.responseText);
-			for (var i = 0; i < 10; i++) {
-				console.log(A["response"]["venues"][i]["name"]);
+			for (var i = 1; i < 11; i++) {
 				var lat = A["response"]["venues"][i]["location"]["lat"];
 				var lng = A["response"]["venues"][i]["location"]["lng"];
         			/* Build icon for each icon */
