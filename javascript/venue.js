@@ -18,7 +18,7 @@ function getVenue() {
         				popupAnchor: new L.Point(0, -51)
 					});
         			var marker = new google.maps.Marker({
-        				position: new google.maps.LatLng(lat, lng);,
+        				position: new google.maps.LatLng(lat, lng),
         				title:"Marker"
 					 })
 				marker.setMap(map);
