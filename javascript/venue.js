@@ -15,7 +15,7 @@ function getVenue() {
 				var lng = A["response"]["venues"][i]["location"]["lng"];
 				var venueName = A["response"]["venues"][i]["name"];
 				var checkIns = A["response"]["venues"][i]["stats"]["checkinsCount"];
-				var hereNow = A["response"]["venues"][i]["hereNow"]["count"];
+				var hereNow = A["response"]["venues"][i]["stats"]["usersCount"];
         			
         			var marker = new google.maps.Marker({
         				position: new google.maps.LatLng(lat, lng),
