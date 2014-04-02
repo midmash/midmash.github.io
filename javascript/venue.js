@@ -23,7 +23,7 @@ function getVenue() {
 					 })
 				marker.setMap(map);
 				
-				.bindPopup(venues[i]['venues']['name'], { closeButton: false })
+				.bindPopup(venues[i]['venue']['name'], { closeButton: false })
           			.on('mouseover', function(e) { this.openPopup(); })
           			.on('mouseout', function(e) { this.closePopup(); });
 			}
