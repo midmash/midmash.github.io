@@ -26,6 +26,11 @@ function getVenue() {
 					 
 				marker.setMap(map);
 				
+				google.maps.event.addListener(marker, 'click', function() {
+    					map.setZoom(8);
+					map.setCenter(marker.getPosition());
+  				});
+				
 				/*google.maps.event.addListener(marker, "mouseover", function(event) {
                             		this.setIcon(A["response"]["venues"][i]["stats"]["checkinsCount"]);
                         	});
