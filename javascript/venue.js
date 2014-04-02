@@ -29,7 +29,7 @@ function getVenue() {
 				//	})
 				
 				var infowindow = new google.maps.InfoWindow({
-					content: ("<p>" + "Venue Name: " + venueName + "<br />" + "Number of Check-In's: " + checkIns + "<br />" + "Number of Users to Check-In Here: " + userChecks + "/p>");
+					content: "Venue Name: " + venueName + "<br />" + "Number of Check-In's: " + checkIns + "<br />" + "Number of Users to Check-In Here: " + userChecks;
 					})
 					 
 				marker.setMap(map);
