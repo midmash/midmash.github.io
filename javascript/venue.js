@@ -24,16 +24,20 @@ function getVenue() {
         				title: "Venue Name: " + venueName + "\n" + "Number of Check-In's: " + checkIns + "\n" + "Number of Users to Check-In Here: " + userChecks
 					 })
 					 
-				var infowindow = new google.maps.InfoWindow({
-					content: "Venue Name: " + venueName + "<br>" + "Number of Check-In's: " + checkIns + "<br>" + "Number of Users to Check-In Here: " + userChecks,
-					map: map
-					})
+				//var infowindow = new google.maps.InfoWindow({
+				//	content: "Venue Name: " + venueName + "<br>" + "Number of Check-In's: " + checkIns + "<br>" + "Number of Users to Check-In Here: " + userChecks,
+				//	map: map
+				//	})
 					 
 				marker.setMap(map);
 				map.setCenter(marker.getPosition());
 				
 				//infowindow.open(map, marker);
 			}
+			var infowindow = new google.maps.InfoWindow({
+					content: "Venue Name: " + venueName + "<br>" + "Number of Check-In's: " + checkIns + "<br>" + "Number of Users to Check-In Here: " + userChecks,
+					map: map
+					})
 			
 			google.maps.event.addListener(marker, "mouseover", function(event) {
 				infowindow.open(map, marker);
