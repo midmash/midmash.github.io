@@ -24,18 +24,12 @@ function getVenue() {
 					 
 				marker.setMap(map);
 				map.setCenter(marker.getPosition());
-			}
-			findVenueName = function() {
-				for (var i = 1; i < 11; i++) {
-					var venueName = A["response"]["venues"][i]["name"];
-				}
-			}
 			
 			google.maps.event.addListener(marker, 'click', function(event) {
     				map.setZoom(8);
 				map.setCenter(marker.getPosition());
 				
-				//var venueName = A["response"]["venues"][i]["name"];
+				var venueName = marker(A["response"]["venues"][i]["name"]);
 				//console.log(venueName);
 					
 				var checkIns = A["response"]["venues"][i]["stats"]["checkinsCount"];
@@ -45,11 +39,11 @@ function getVenue() {
   				//console.log(hereNow);
 				
   					
-  				document.getElementById("venue-recs").innerHTML = "Venue Name: " + "<br>" + marker.findVenueName() + "<br>" + "<br>" + "Number of Check-Ins: " + "<br>" + checkIns + "<br>" + "<br>" + "Number of Users to Check-In Here: " + "<br>" + userChecks;
+  				document.getElementById("venue-recs").innerHTML = "Venue Name: " + "<br>" + venueName + "<br>" + "<br>" + "Number of Check-Ins: " + "<br>" + checkIns + "<br>" + "<br>" + "Number of Users to Check-In Here: " + "<br>" + userChecks;
   					//document.getElementById("venue-recs").innerHTML = checkIns;
   					//document.getElementById("venue-recs").innerHTML = hereNow;
   				});
-			
+			}
 			
 				
 				/*google.maps.event.addListener(marker, "mouseover", function(event) {
