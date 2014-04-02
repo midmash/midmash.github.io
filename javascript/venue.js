@@ -6,10 +6,29 @@ function getVenue() {
 		{
 			var A = JSON.parse(request.responseText);
 			for (var i = 0; i < 10; i++) {
-				console.log(A["response"]["venues"][i]["name"]);	
-				}
+				console.log(A["response"]["venues"][i]["name"]);
+				var lat = A["response"]["venues"][i]["location"]["lat"];
+				var lng = A["response"]["venues"][i]["location"]["lng"];
+        			/* Build icon for each icon */
+        			var leafletIcon = L.Icon.extend({
+          				iconUrl: A['venues'][i]['categories'][0]['icon'],
+        				shadowUrl: null,
+          				iconSize: new L.Point(32,32),
+          				iconAnchor: new L.Point(16, 41),
+        				popupAnchor: new L.Point(0, -51)
+					});
+        			var marker = new google.maps.Marker({
+        				position: new google.maps.LatLng(lat, lng);,
+        				title:"Marker"
+					 })
+				marker.setMap(map);
+			}
 		}
-	}
+					
+          /*.bindPopup(venues[i]['venue']['name'], { closeButton: false })
+          .on('mouseover', function(e) { this.openPopup(); })
+          .on('mouseout', function(e) { this.closePopup(); });*/
+ 
 	request.open("GET",URL,true);
 	request.send();
 };  
