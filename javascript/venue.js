@@ -22,12 +22,13 @@ function getVenue() {
         				title:"Marker"
 					 })
 				marker.setMap(map);
+				
+				.bindPopup(venues[i]['venues']['name'], { closeButton: false })
+          			.on('mouseover', function(e) { this.openPopup(); })
+          			.on('mouseout', function(e) { this.closePopup(); });
 			}
 		}
 					
-          /*.bindPopup(venues[i]['venue']['name'], { closeButton: false })
-          .on('mouseover', function(e) { this.openPopup(); })
-          .on('mouseout', function(e) { this.closePopup(); });*/
 	}
 	request.open("GET",URL,true);
 	request.send();
