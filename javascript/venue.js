@@ -10,7 +10,7 @@ function getVenue() {
 		{
 			var A = JSON.parse(request.responseText);
 			console.log(A);
-			for (var i = 1; i < 11; i++) {
+			for (var i = ""; i < 11; i++) {
 				var lat = A["response"]["venues"][i]["location"]["lat"];
 				var lng = A["response"]["venues"][i]["location"]["lng"];
         			/* Build icon for each icon */
@@ -28,12 +28,12 @@ function getVenue() {
 					 
 				marker.setMap(map);
 				map.setCenter(marker.getPosition());
-				
+
 			google.maps.event.addListener(marker, 'click', function(event) {
     				map.setZoom(8);
 				map.setCenter(marker.getPosition());
 					
-				var venueName = A["response"]["venues"]["name"];
+				var venueName = A["response"]["venues"][i]["name"];
 				console.log(venueName);
 					
 				var checkIns = A["response"]["venues"][i]["stats"]["checkinsCount"];
