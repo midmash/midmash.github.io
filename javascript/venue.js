@@ -10,7 +10,7 @@ function getVenue() {
 		{
 			var A = JSON.parse(request.responseText);
 			console.log(A);
-			for (var i != 0; i < 11; i++) {
+			for (var i == 0; i < 11; i++) {
 				var lat = A["response"]["venues"][i]["location"]["lat"];
 				var lng = A["response"]["venues"][i]["location"]["lng"];
         			/* Build icon for each icon */
