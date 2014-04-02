@@ -10,13 +10,13 @@ function getVenue() {
 				var lat = A["response"]["venues"][i]["location"]["lat"];
 				var lng = A["response"]["venues"][i]["location"]["lng"];
         			/* Build icon for each icon */
-        			var leafletIcon = L.Icon.extend({
+        			/*var leafletIcon = L.Icon.extend({
           				iconUrl: A['venues'][i]['categories'][0]['icon'],
         				shadowUrl: null,
           				iconSize: new L.Point(32,32),
           				iconAnchor: new L.Point(16, 41),
         				popupAnchor: new L.Point(0, -51)
-					});
+					});*/
         			var marker = new google.maps.Marker({
         				position: new google.maps.LatLng(lat, lng),
         				title:"Marker"
