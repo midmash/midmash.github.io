@@ -14,9 +14,9 @@ function getVenue() {
 				var lat = A["response"]["venues"][i]["location"]["lat"];
 				var lng = A["response"]["venues"][i]["location"]["lng"];
 				
-				//var venueName = A["response"]["venues"][i]["name"];
-				//var checkIns = A["response"]["venues"][i]["stats"]["checkinsCount"];
-				//var userChecks = A["response"]["venues"][i]["stats"]["usersCount"];
+				var venueName = A["response"]["venues"][i]["name"];
+				var checkIns = A["response"]["venues"][i]["stats"]["checkinsCount"];
+				var userChecks = A["response"]["venues"][i]["stats"]["usersCount"];
 				
         			
         			//var marker = new google.maps.Marker({
@@ -26,7 +26,7 @@ function getVenue() {
 					 
 				var infowindow = new google.maps.InfoWindow({
 					content: "Number of Check-In's: " + checkIns + "<br>" + "Number of Users to Check-In Here: " + userChecks,
-					map: map
+					map: map,
 					title: venueName
 					})
 					 
