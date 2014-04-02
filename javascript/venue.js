@@ -42,7 +42,8 @@ function getVenue() {
   					console.log(hereNow);
   					
   					
-  					document.getElementById("venue-recs").innerHTML+="Name of Venue: " + venueName + "Check-Ins: " + checkIns + "Number of People Here Now: " + hereNow;
+  					var allInfo += "Name of Venue: " + venueName.toString() + "Check-Ins: " + checkIns.toString() + "Number of People Here Now: " + hereNow.toString();
+  					document.getElementById("venue-recs").innerHTML = allInfo
   				});
   				
 				
