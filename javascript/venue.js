@@ -13,9 +13,9 @@ function getVenue() {
 		if (request.readyState == 4 && request.status==200);
 		{
 			var A = JSON.parse(request.responseText);
-			console.log(A["response"]["venues"][1]["name"]);
 		}
 	}
 	request.open("GET",URL,true);
 	request.send();
+	console.log(A["response"]["venues"][1]["name"]);
 };  
