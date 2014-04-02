@@ -33,7 +33,7 @@ function getVenue() {
     				map.setZoom(8);
 				map.setCenter(marker.getPosition());
 					
-				var venueName = A["response"]["venues"][i]["name"];
+				var venueName = marker.(A["response"]["venues"][i]["name"]);
 				console.log(venueName);
 					
 				var checkIns = A["response"]["venues"][i]["stats"]["checkinsCount"];
