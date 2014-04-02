@@ -1,4 +1,5 @@
-//var checkIns;
+var checkIns;
+var hereNow;
 
 function getVenue() {
 	var request = new XMLHttpRequest();
@@ -29,7 +30,10 @@ function getVenue() {
 				google.maps.event.addListener(marker, 'click', function() {
     					map.setZoom(8);
 					map.setCenter(marker.getPosition());
+					var checkIns = A["response"]["venues"][i]["stats"]["checkinsCount"];
+					var hereNow = A["response"]["venues"][i]["hereNow"]["count"];
   				});
+  				
 				
 				/*google.maps.event.addListener(marker, "mouseover", function(event) {
                             		this.setIcon(A["response"]["venues"][i]["stats"]["checkinsCount"]);
