@@ -28,7 +28,7 @@ function getVenue() {
           /*.bindPopup(venues[i]['venue']['name'], { closeButton: false })
           .on('mouseover', function(e) { this.openPopup(); })
           .on('mouseout', function(e) { this.closePopup(); });*/
- 
+	}
 	request.open("GET",URL,true);
 	request.send();
-};  
+}
