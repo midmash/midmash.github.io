@@ -21,7 +21,6 @@ function mapAddress() {
 		if (status == google.maps.GeocoderStatus.OK) {
 			map.setCenter(results[0].geometry.location);
 			map.setZoom(13);
-			lookForFun();
 		} else {
 			alert('Search was not successful because: ' + status);
 		}
