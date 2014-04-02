@@ -23,9 +23,13 @@ function getVenue() {
 					 })
 				marker.setMap(map);
 				
-				.bindPopup(venues[i]['venue']['name'], { closeButton: false })
-          			.on('mouseover', function(e) { this.openPopup(); })
-          			.on('mouseout', function(e) { this.closePopup(); });
+				/*google.maps.event.addListener(marker, "mouseover", function(event) {
+                            		this.setIcon(A["response"]["venues"][i]);
+                        	});
+
+                            	google.maps.event.addListener(marker, "mouseout", function(event) {
+                            		this.setIcon(image);
+                            	});*/
 			}
 		}
 					
