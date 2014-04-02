@@ -14,25 +14,25 @@ function getVenue() {
 				var lat = A["response"]["venues"][i]["location"]["lat"];
 				var lng = A["response"]["venues"][i]["location"]["lng"];
 				
-				if google.maps.event.addListener(marker, 'click', function(event) {
-					console.log(A)
-					var venueName = A["response"]["venues"][i]["name"];
-					var checkIns = A["response"]["venues"][i]["stats"]["checkinsCount"];
-					var userChecks = A["response"]["venues"][i]["stats"]["usersCount"];
-					document.getElementById("venue-recs").innerHTML = "Venue Name: " + "<br>" + venueName + "<br>" + "<br>" + "Number of Check-Ins: " + "<br>" + checkIns + "<br>" + "<br>" + "Number of Users to Check-In Here: " + "<br>" + userChecks;
-				}
+				//if google.maps.event.addListener(marker, 'click', function(event) {
+				console.log(A)
+				var venueName = A["response"]["venues"][i]["name"];
+				var checkIns = A["response"]["venues"][i]["stats"]["checkinsCount"];
+				var userChecks = A["response"]["venues"][i]["stats"]["usersCount"];
+				document.getElementById("venue-recs").innerHTML = "Venue Name: " + "<br>" + venueName + "<br>" + "<br>" + "Number of Check-Ins: " + "<br>" + checkIns + "<br>" + "<br>" + "Number of Users to Check-In Here: " + "<br>" + userChecks;
+				
         			
         			var marker = new google.maps.Marker({
         				position: new google.maps.LatLng(lat, lng),
         				title:"Marker",
 					 })
 					 
-			//	marker.setMap(map);
-			//	map.setCenter(marker.getPosition());
+				marker.setMap(map);
+				map.setCenter(marker.getPosition());
 			
-			//google.maps.event.addListener(marker, 'click', function(event) {
-    			//	map.setZoom(8);
-			//	map.setCenter(marker.getPosition());
+				google.maps.event.addListener(marker, 'click', function(event) {
+    					map.setZoom(8);
+					map.setCenter(marker.getPosition());
 				
 					//var venueName = ["response"]["venues"][i]["name"];
 					//console.log(venueName);
@@ -44,7 +44,7 @@ function getVenue() {
   					//console.log(hereNow);
 				
   					
-  			//	document.getElementById("venue-recs").innerHTML = "Venue Name: " + "<br>" + venueName + "<br>" + "<br>" + "Number of Check-Ins: " + "<br>" + checkIns + "<br>" + "<br>" + "Number of Users to Check-In Here: " + "<br>" + userChecks;
+  					document.getElementById("venue-recs").innerHTML = "Venue Name: " + "<br>" + venueName + "<br>" + "<br>" + "Number of Check-Ins: " + "<br>" + checkIns + "<br>" + "<br>" + "Number of Users to Check-In Here: " + "<br>" + userChecks;
   					//document.getElementById("venue-recs").innerHTML = checkIns;
   					//document.getElementById("venue-recs").innerHTML = hereNow;
   				});
