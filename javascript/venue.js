@@ -31,15 +31,17 @@ function getVenue() {
 				google.maps.event.addListener(marker, 'click', function() {
     					map.setZoom(8);
 					map.setCenter(marker.getPosition());
+					
 					var venueName = A["response"]["venues"][i]["name"];
-					document.getElementById("venue-recs").innerHTML=venueName;
 					console.log(venueName);
+					
 					var checkIns = A["response"]["venues"][i]["stats"]["checkinsCount"];
-					document.getElementById("venue-recs").innerHTML=checkIns;
 					console.log(checkIns);
+					
 					var hereNow = A["response"]["venues"][i]["hereNow"]["count"];
-					document.getElementById("venue-recs").innerHTML=hereNow;
   					console.log(hereNow);
+  					
+  					document.getElementById("venue-recs").innerHTML="Name of Venue: " + venueName + "Check-Ins: " + checkIns + "Number of People Here Now: " + hereNow;
   				});
   				
 				
