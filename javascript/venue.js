@@ -20,9 +20,8 @@ function getVenue() {
         			var marker = new google.maps.Marker({
         				position: new google.maps.LatLng(lat, lng),
         				title:"Marker",
-        				icon: image,
-        				src: image
 					 })
+					 
 				marker.setMap(map);
 				
 				google.maps.event.addListener(marker, "mouseover", function(event) {
