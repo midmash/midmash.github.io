@@ -59,7 +59,7 @@ function getVenue() {
                             		this.setIcon(A["response"]["venues"][i]["hereNow"]["count"]);
                             	});*/
 			
-		}
+		
 					
 	}
 	request.open("GET",URL,true);
