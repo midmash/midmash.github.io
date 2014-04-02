@@ -27,13 +27,4 @@ function mapAddress() {
 	});
 }
 
-
-/*Clears the highlighting on all the tweets in the feed.
-clearHighlights = function() {
-	tweets = document.getElementsByClassName("tweet");
-	for (var i = 0; i < tweets.length; i++) {
-		tweets[i].style.backgroundColor = 'white';
-	}
-}*/
-
 google.maps.event.addDomListener(window, 'load', initialize);
