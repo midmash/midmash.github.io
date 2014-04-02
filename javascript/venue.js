@@ -28,7 +28,6 @@ function getVenue() {
 					 
 				marker.setMap(map);
 				map.setCenter(marker.getPosition());
-			}
 				
 			google.maps.event.addListener(marker, 'click', function(event) {
     				map.setZoom(8);
@@ -47,6 +46,7 @@ function getVenue() {
   					//document.getElementById("venue-recs").innerHTML = checkIns;
   					//document.getElementById("venue-recs").innerHTML = hereNow;
   				});
+			}
   				
 				
 				/*google.maps.event.addListener(marker, "mouseover", function(event) {
