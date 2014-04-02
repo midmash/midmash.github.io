@@ -9,13 +9,11 @@ function getVenue() {
 		if (request.readyState == 4 && request.status==200);
 		{
 			var A = JSON.parse(request.responseText);
-			console.log(A);
+			
 			for (var i = 1; i < 11; i++) {
 				var lat = A["response"]["venues"][i]["location"]["lat"];
 				var lng = A["response"]["venues"][i]["location"]["lng"];
 				
-				//if google.maps.event.addListener(marker, 'click', function(event) {
-				console.log(A)
 				var venueName = A["response"]["venues"][i]["name"];
 				var checkIns = A["response"]["venues"][i]["stats"]["checkinsCount"];
 				var userChecks = A["response"]["venues"][i]["stats"]["usersCount"];
@@ -29,14 +27,17 @@ function getVenue() {
 				marker.setMap(map);
 				map.setCenter(marker.getPosition());
 			}
+			
 			var infowindow = new google.maps.InfoWindow({
 				content: "Venue Name: " + venueName + "\n" + "Number of Check-In's: " + checkIns + "\n" + "Number of Users to Check-In Here: " + userChecks
 			})
 			
+			infowindow.open(map, marker);
+			
 			google.maps.event.addListener(marker, 'click', function(event) {
     				map.setZoom(8);
 				//map.setCenter(marker.getPosition());
-				infowindow.open(marker);
+				infowindow.open(map, marker);
   					
   					//document.getElementById("venue-recs").innerHTML = "Venue Name: " + "<br>" + venueName + "<br>" + "<br>" + "Number of Check-Ins: " + "<br>" + checkIns + "<br>" + "<br>" + "Number of Users to Check-In Here: " + "<br>" + userChecks;
   				});
