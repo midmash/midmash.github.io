@@ -25,7 +25,7 @@ function getVenue() {
 					 })
 					 
 				var infowindow = new google.maps.InfoWindow({
-					content: "Venue Name: " + venueName + "\n" + "Number of Check-In's: " + checkIns + "\n" + "Number of Users to Check-In Here: " + userChecks
+					content: "Venue Name: " + venueName + "<br>" + "Number of Check-In's: " + checkIns + "<br>" + "Number of Users to Check-In Here: " + userChecks
 					})
 					 
 				marker.setMap(map);
