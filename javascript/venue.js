@@ -32,17 +32,17 @@ function getVenue() {
 				var infowindow = new google.maps.InfoWindow({
 					content: "Venue Name: " + venueName + "\n" + "Number of Check-In's: " + checkIns + "\n" + "Number of Users to Check-In Here: " + userChecks
 				})
-			
-				google.maps.event.addListener(marker, 'mouseover', function(event) {
-    					map.setZoom(8);
-					map.setCenter(marker.getPosition());
-					infowindow.open(map, marker);
+			}
+			google.maps.event.addListener(marker, 'mouseover', function(event) {
+    				map.setZoom(8);
+				map.setCenter(marker.getPosition());
+				infowindow.open(map, marker);
   					
   					//document.getElementById("venue-recs").innerHTML = "Venue Name: " + "<br>" + venueName + "<br>" + "<br>" + "Number of Check-Ins: " + "<br>" + checkIns + "<br>" + "<br>" + "Number of Users to Check-In Here: " + "<br>" + userChecks;
   				});
   				
   				
-			}
+			
 			
 				
 				/*google.maps.event.addListener(marker, "mouseover", function(event) {
