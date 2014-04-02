@@ -42,7 +42,7 @@ function getVenue() {
 					var hereNow = A["response"]["venues"][i]["hereNow"]["count"];
   					console.log(hereNow);
   					
-  					document.getElementById("venue-recs").innerHTML = "Venue Name: " + venueName + "\n" + "Number of Check-Ins: " + checkIns + "\n" + "Number of People Here Now: " + hereNow;
+  					document.getElementById("venue-recs").innerHTML = "Venue Name: " + "\n" + venueName + "\n" + "Number of Check-Ins: " + "\n" + checkIns + "\n" + "Number of People Here Now: " + "\n" + hereNow;
   					//document.getElementById("venue-recs").innerHTML = checkIns;
   					//document.getElementById("venue-recs").innerHTML = hereNow;
   				});
