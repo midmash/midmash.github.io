@@ -39,7 +39,7 @@ function getVenue() {
   				//console.log(hereNow);
 				
   					
-  				document.getElementById("venue-recs").innerHTML = "Venue Name: " + "<br>" + venueName + "<br>" + "<br>" + "Number of Check-Ins: " + "<br>" + checkIns + "<br>" + "<br>" + "Number of Users to Check-In Here: " + "<br>" + hereNow;
+  				document.getElementById("venue-recs").innerHTML = "Venue Name: " + "<br>" + venueName + "<br>" + "<br>" + "Number of Check-Ins: " + "<br>" + checkIns + "<br>" + "<br>" + "Number of Users to Check-In Here: " + "<br>" + userChecks;
   					//document.getElementById("venue-recs").innerHTML = checkIns;
   					//document.getElementById("venue-recs").innerHTML = hereNow;
   				});
