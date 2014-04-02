@@ -14,7 +14,7 @@ function getVenue() {
 				var lat = A["response"]["venues"][i]["location"]["lat"];
 				var lng = A["response"]["venues"][i]["location"]["lng"];
 				
-				if marker.getPosition() = google.maps.event.addListener(marker, 'click', function(event) {
+				if google.maps.event.addListener(marker, 'click', function(event) {
 					console.log(A)
 					var venueName = A["response"]["venues"][i]["name"];
 					var checkIns = A["response"]["venues"][i]["stats"]["checkinsCount"];
