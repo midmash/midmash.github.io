@@ -19,10 +19,10 @@ function getVenue() {
 				var userChecks = A["response"]["venues"][i]["stats"]["usersCount"];
 				
         			
-        			//var marker = new google.maps.Marker({
-        			//	position: new google.maps.LatLng(lat, lng),
-        			//	title: "Venue Name: " + venueName + "\n" + "Number of Check-In's: " + checkIns + "\n" + "Number of Users to Check-In Here: " + userChecks
-				//	 })
+        			var marker = new google.maps.Marker({
+        				position: new google.maps.LatLng(lat, lng),
+        				title: "Venue Name: " + venueName + "\n" + "Number of Check-In's: " + checkIns + "\n" + "Number of Users to Check-In Here: " + userChecks
+					 })
 					 
 				var infowindow = new google.maps.InfoWindow({
 					content: "Number of Check-In's: " + checkIns + "<br>" + "Number of Users to Check-In Here: " + userChecks,
