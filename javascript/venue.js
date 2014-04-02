@@ -29,24 +29,20 @@ function getVenue() {
 				marker.setMap(map);
 				map.setCenter(marker.getPosition());
 			
-				google.maps.event.addListener(marker, 'click', function(event) {
+				var infowindow = new google.maps.InfoWindow({
+					content: "Venue Name: " + venueName + "\n" + "Number of Check-In's: " + checkIns + "\n" + "Number of Users to Check-In Here: " + userChecks
+					map: map
+				})
+			
+				google.maps.event.addListener(marker, 'mouseover', function(event) {
     					map.setZoom(8);
 					map.setCenter(marker.getPosition());
-				
-					//var venueName = ["response"]["venues"][i]["name"];
-					//console.log(venueName);
-					
-					//var checkIns = A["response"]["venues"][i]["stats"]["checkinsCount"];
-					//console.log(checkIns);
-					
-					//var userChecks = A["response"]["venues"][i]["stats"]["usersCount"];
-  					//console.log(hereNow);
-				
+					infowindow.open(map, marker);
   					
-  					document.getElementById("venue-recs").innerHTML = "Venue Name: " + "<br>" + venueName + "<br>" + "<br>" + "Number of Check-Ins: " + "<br>" + checkIns + "<br>" + "<br>" + "Number of Users to Check-In Here: " + "<br>" + userChecks;
-  					//document.getElementById("venue-recs").innerHTML = checkIns;
-  					//document.getElementById("venue-recs").innerHTML = hereNow;
+  					//document.getElementById("venue-recs").innerHTML = "Venue Name: " + "<br>" + venueName + "<br>" + "<br>" + "Number of Check-Ins: " + "<br>" + checkIns + "<br>" + "<br>" + "Number of Users to Check-In Here: " + "<br>" + userChecks;
   				});
+  				
+  				
 			}
 			
 				
