@@ -32,7 +32,7 @@ function getVenue() {
 
                             	google.maps.event.addListener(marker, "mouseout", function(event) {
                             		this.setIcon(A["response"]["venues"][i]["hereNow"]["count"]);
-                            	});*/
+                            	});
 			}
 		}
 					
