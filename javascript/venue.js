@@ -6,8 +6,8 @@ function getVenue() {
 		{
 			var A = JSON.parse(request.responseText);
 			for (var i = 0; i < 10; i++) {
-			console.log(A["response"]["venues"][i]["name"]);	
-			}
+				console.log(A["response"]["venues"][i]["name"]);	
+				}
 		}
 	}
 	request.open("GET",URL,true);
