@@ -32,7 +32,7 @@ function getVenue() {
 				marker.setMap(map);
 				map.setCenter(marker.getPosition());
 				
-				//infowindow.open(map, marker);
+				infowindow.open(map, marker);
 			}
 			
 			//for marker in map:
@@ -42,13 +42,13 @@ function getVenue() {
 			//		map: map
 			//		})
 			
-			google.maps.event.addListener(marker, "mouseover", function(event) {
-				infowindow.open(map, marker);
-			});
+			//google.maps.event.addListener(marker, "mouseover", function(event) {
+			//	infowindow.open(map, marker);
+			//});
 			
-			google.maps.event.addListener(marker, "mouseclose", function(event) {
-				infowindow.close(map, marker);
-			});
+			//google.maps.event.addListener(marker, "mouseclose", function(event) {
+			//	infowindow.close(map, marker);
+			//});
 		}
 	}
 	request.open("GET",URL,true);
