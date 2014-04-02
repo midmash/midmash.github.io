@@ -32,16 +32,16 @@ function getVenue() {
     					map.setZoom(8);
 					map.setCenter(marker.getPosition());
 					
-					var venueName = "Name of Venue: " + A["response"]["venues"][i]["name"];
+					var venueName = A["response"]["venues"][i]["name"];
 					console.log(venueName);
 					
-					var checkIns = "Check-Ins: " A["response"]["venues"][i]["stats"]["checkinsCount"];
+					var checkIns = A["response"]["venues"][i]["stats"]["checkinsCount"];
 					console.log(checkIns);
 					
-					var hereNow = "Number of People Here Now: " A["response"]["venues"][i]["hereNow"]["count"];
+					var hereNow = A["response"]["venues"][i]["hereNow"]["count"];
   					console.log(hereNow);
   					
-  					document.getElementById("venue-recs").innerHTML = venueName, checkIns, hereNow;
+  					document.getElementById("venue-recs").innerHTML = venueName;
   				});
   				
 				
