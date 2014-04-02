@@ -25,9 +25,8 @@ function getVenue() {
 					 })
 					 
 				var infowindow = new google.maps.InfoWindow({
-					content: "Number of Check-In's: " + checkIns + "<br>" + "Number of Users to Check-In Here: " + userChecks,
+					content: "Venue Name: " + venueName + "<br>" + "Number of Check-In's: " + checkIns + "<br>" + "Number of Users to Check-In Here: " + userChecks,
 					map: map,
-					title: venueName
 					})
 					 
 				marker.setMap(map);
@@ -42,6 +41,10 @@ function getVenue() {
 			//		content: "Venue Name: " + venueName + "<br>" + "Number of Check-In's: " + checkIns + "<br>" + "Number of Users to Check-In Here: " + userChecks,
 			//		map: map
 			//		})
+			
+			google.maps.event.addListener(marker, "mouseover", function(event) {
+				infowindow.open(map, marker);
+			});
 			
 			google.maps.event.addListener(marker, "mouseover", function(event) {
 				infowindow.open(map, marker);
