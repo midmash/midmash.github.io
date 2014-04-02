@@ -19,16 +19,18 @@ function getVenue() {
 					});*/
         			var marker = new google.maps.Marker({
         				position: new google.maps.LatLng(lat, lng),
-        				title:"Marker"
+        				title:"Marker",
+        				icon: image,
+        				src: image
 					 })
 				marker.setMap(map);
 				
-				/*google.maps.event.addListener(marker, "mouseover", function(event) {
-                            		this.setIcon(A["response"]["venues"][i]);
+				google.maps.event.addListener(marker, "mouseover", function(event) {
+                            		this.setIcon(A["response"]["venues"][i]["categories"][0]["icon"]);
                         	});
 
-                            	google.maps.event.addListener(marker, "mouseout", function(event) {
-                            		this.setIcon(image);
+                            	/*google.maps.event.addListener(marker, "mouseout", function(event) {
+                            		this.setIcon(marker);
                             	});*/
 			}
 		}
