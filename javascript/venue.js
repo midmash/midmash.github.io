@@ -46,8 +46,8 @@ function getVenue() {
 				infowindow.open(map, marker);
 			});
 			
-			google.maps.event.addListener(marker, "mouseover", function(event) {
-				infowindow.open(map, marker);
+			google.maps.event.addListener(marker, "mouseclose", function(event) {
+				infowindow.close(map, marker);
 			});
 		}
 	}
