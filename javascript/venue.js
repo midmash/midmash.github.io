@@ -41,6 +41,7 @@ function getVenue() {
 					var hereNow = A["response"]["venues"][i]["hereNow"]["count"];
   					console.log(hereNow);
   					
+  					
   					document.getElementById("venue-recs").innerHTML+="Name of Venue: " + venueName + "Check-Ins: " + checkIns + "Number of People Here Now: " + hereNow;
   				});
   				
