@@ -31,9 +31,10 @@ function getVenue() {
 				marker.setMap(map);
 				map.setCenter(marker.getPosition());
 				
-				google.maps.event.addListener(marker, 'click', function(event) {
-					infowindow.open(map, marker);
+				//infowindow.open(map, marker);
 				}
+				google.maps.event.addListener(marker, "mouseover", function(event) {
+					infowindow.open(map, marker);
 			}
 			
 			//infowindow.open(map, marker);
