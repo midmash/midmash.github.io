@@ -31,7 +31,9 @@ function getVenue() {
     					map.setZoom(8);
 					map.setCenter(marker.getPosition());
 					var checkIns = A["response"]["venues"][i]["stats"]["checkinsCount"];
+					console.log(checkIns);
 					var hereNow = A["response"]["venues"][i]["hereNow"]["count"];
+  					console.log(hereNow);
   				});
   				
 				
