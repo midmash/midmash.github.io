@@ -28,8 +28,8 @@ function getVenue() {
                             		this.setIcon(A["response"]["venues"][i]["categories"][0]["icon"]);
                         	});
 
-                            	google.maps.event.addListener(marker, "mouseout", function(event) {
-                            		this.setIcon("Marker");
+                            	/*google.maps.event.addListener(marker, "mouseout", function(event) {
+                            		this.setIcon(A["response"]["venues"][i][""]);
                             	});*/
 			}
 		}
