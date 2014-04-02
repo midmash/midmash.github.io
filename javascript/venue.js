@@ -13,9 +13,6 @@ function getVenue() {
 			for (var i = 1; i < 11; i++) {
 				var lat = A["response"]["venues"][i]["location"]["lat"];
 				var lng = A["response"]["venues"][i]["location"]["lng"];
-				var venueName = A["response"]["venues"][i]["name"];
-				var checkIns = A["response"]["venues"][i]["stats"]["checkinsCount"];
-				var hereNow = A["response"]["venues"][i]["hereNow"]["count"];
         			/* Build icon for each icon */
         			/*var leafletIcon = L.Icon.extend({
           				iconUrl: A['venues'][i]['categories'][0]['icon'],
@@ -36,14 +33,14 @@ function getVenue() {
     				map.setZoom(8);
 				map.setCenter(marker.getPosition());
 					
-				//var venueName = A["response"]["venues"][i]["name"];
-				//console.log(venueName);
+				var venueName = A["response"]["venues"][i]["name"];
+				console.log(venueName);
 					
-				//var checkIns = A["response"]["venues"][i]["stats"]["checkinsCount"];
-				//console.log(checkIns);
+				var checkIns = A["response"]["venues"][i]["stats"]["checkinsCount"];
+				console.log(checkIns);
 					
-				//var hereNow = A["response"]["venues"][i]["hereNow"]["count"];
-  				//console.log(hereNow);
+				var hereNow = A["response"]["venues"][i]["hereNow"]["count"];
+  				console.log(hereNow);
   					
   				document.getElementById("venue-recs").innerHTML = "Venue Name: " + "<br>" + venueName + "<br>" + "<br>" + "Number of Check-Ins: " + "<br>" + checkIns + "<br>" + "<br>" + "Number of People Here Now: " + "<br>" + hereNow;
   					//document.getElementById("venue-recs").innerHTML = checkIns;
