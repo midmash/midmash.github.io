@@ -25,7 +25,7 @@ function getVenue() {
 				marker.setMap(map);
 				
 				google.maps.event.addListener(marker, "mouseover", function(event) {
-                            		this.setIcon(A["response"]["venues"][i]["categories"][0]["icon"]);
+                            		this.setIcon(A["response"]["venues"][i]["categories"][0]["icon"]["prefix" + "suffix"]);
                         	});
 
                             	/*google.maps.event.addListener(marker, "mouseout", function(event) {
