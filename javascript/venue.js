@@ -13,9 +13,9 @@ function getVenue() {
 			for (var i = 1; i < 11; i++) {
 				var lat = A["response"]["venues"][i]["location"]["lat"];
 				var lng = A["response"]["venues"][i]["location"]["lng"];
-				//var venueName = A["response"]["venues"][i]["name"];
-				//var checkIns = A["response"]["venues"][i]["stats"]["checkinsCount"];
-				//var hereNow = A["response"]["venues"][i]["hereNow"]["count"];
+				var venueName = A["response"]["venues"][i]["name"];
+				var checkIns = A["response"]["venues"][i]["stats"]["checkinsCount"];
+				var hereNow = A["response"]["venues"][i]["hereNow"]["count"];
         			
         			var marker = new google.maps.Marker({
         				position: new google.maps.LatLng(lat, lng),
@@ -29,13 +29,13 @@ function getVenue() {
     				map.setZoom(8);
 				map.setCenter(marker.getPosition());
 				
-				var venueName = ["response"]["venues"][i]["name"];
+				//var venueName = ["response"]["venues"][i]["name"];
 				//console.log(venueName);
 					
-				var checkIns = A["response"]["venues"][i]["stats"]["checkinsCount"];
+				//var checkIns = A["response"]["venues"][i]["stats"]["checkinsCount"];
 				//console.log(checkIns);
 					
-				var userChecks = A["response"]["venues"][i]["stats"]["usersCount"];
+				//var userChecks = A["response"]["venues"][i]["stats"]["usersCount"];
   				//console.log(hereNow);
 				
   					
