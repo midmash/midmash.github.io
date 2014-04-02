@@ -23,7 +23,7 @@ function getVenue() {
         			
         			var marker = new google.maps.Marker({
         				position: new google.maps.LatLng(lat, lng),
-        				title: venueName + "<\n>" + "Number of Check-In's: " + checkIns + "<br>" + "Number of Users to Check-In Here: " + userChecks
+        				title: "Venue Name: " + venueName + "\n" + "Number of Check-In's: " + checkIns + "\n" + "Number of Users to Check-In Here: " + userChecks
 					 })
 					 
 				marker.setMap(map);
