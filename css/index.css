@@ -56,11 +56,12 @@ p{
 
 
 #map-canvas {
-	margin-left: auto;
-	margin-right: auto;
 	height: 50%; 
 	width: 50%;
+	position: absolute;
 	border-color: purple;
 	border-style: solid;
 	border-width: 10px;
+	box-shadow: 0px 0px 5px #888888;
+	
 }
