@@ -56,8 +56,8 @@ p{
 
 
 #map-canvas {
-	height: 50%; 
-	width: 50%;
+	height: 80%; 
+	width: 80%;
 	position: absolute;
 	border-color: purple;
 	border-style: solid;
