@@ -9,7 +9,7 @@ function getVenue() {
 		if (request.readyState == 4 && request.status==200);
 		{
 			var A = JSON.parse(request.responseText);
-			console.log(A);
+			//console.log(A);
 			for (var i = 1; i < 11; i++) {
 				var lat = A["response"]["venues"][i]["location"]["lat"];
 				var lng = A["response"]["venues"][i]["location"]["lng"];
