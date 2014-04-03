@@ -27,13 +27,29 @@ function getVenue() {
 				marker.setMap(map);
 				map.setCenter(marker.getPosition());
 				map.setZoom(8);
+				InfoWindow(marker);
 				
-				var infowindow = new google.maps.InfoWindow({
+				//var infowindow = new google.maps.InfoWindow({
+				//	content: "Venue Name: " + venueName + "<br>" + "Number of Check-In's: " + checkIns + "<br>" + "Number of Users to Check-In Here: " + userChecks,
+				//	map: map,
+				//})
+				
+				//infowindow.open(map, marker);
+			}
+			
+			function InfoWindow(marker) {
+				var infoWindow = new google.maps.InfoWindow({
 					content: "Venue Name: " + venueName + "<br>" + "Number of Check-In's: " + checkIns + "<br>" + "Number of Users to Check-In Here: " + userChecks,
 					map: map,
 				})
 				
-				infowindow.open(map, marker);
+				new google.maps.event.addListener(marker, 'click', function() {
+					infoWindow.open(marker.get('map'), marker);
+				})
+				
+				new google.maps.even.addListener(marker, 'click', function() {
+					infoWindow.close();
+				})
 			}
 			
 			//for marker in map:
