@@ -28,7 +28,7 @@ function getVenue() {
 				InfoWindow(marker);	 
 				marker.setMap(map);
 				map.setCenter(marker.getPosition());
-				map.setZoom(10);
+				map.setZoom(18);
 				
 			}
 			
