@@ -11,6 +11,34 @@ function getVenue() {
 			var A = JSON.parse(request.responseText);
 			//console.log(A);
 			for (var i = 1; i < 11; i++) {
+				//var lat = A["response"]["venues"][i]["location"]["lat"];
+				//var lng = A["response"]["venues"][i]["location"]["lng"];
+				
+				//var venueName = A["response"]["venues"][i]["name"];
+				//var checkIns = A["response"]["venues"][i]["stats"]["checkinsCount"];
+				//var userChecks = A["response"]["venues"][i]["stats"]["usersCount"];
+				
+        			
+        			//var marker = new google.maps.Marker({
+        			//	position: new google.maps.LatLng(lat, lng),
+        			//	title: "Venue Name: " + venueName + "\n" + "Number of Check-In's: " + checkIns + "\n" + "Number of Users to Check-In Here: " + userChecks
+				//	})
+					 
+				markInfo(map);
+				marker.setMap(map);
+				map.setCenter(marker.getPosition());
+				map.setZoom(8);
+				//InfoWindow(marker);
+				
+				//var infowindow = new google.maps.InfoWindow({
+				//	content: "Venue Name: " + venueName + "<br>" + "Number of Check-In's: " + checkIns + "<br>" + "Number of Users to Check-In Here: " + userChecks,
+				//	map: map,
+				//})
+				
+				//infowindow.open(map, marker);
+			}
+			
+			function markInfo(map) {
 				var lat = A["response"]["venues"][i]["location"]["lat"];
 				var lng = A["response"]["venues"][i]["location"]["lng"];
 				
@@ -23,23 +51,9 @@ function getVenue() {
         				position: new google.maps.LatLng(lat, lng),
         				title: "Venue Name: " + venueName + "\n" + "Number of Check-In's: " + checkIns + "\n" + "Number of Users to Check-In Here: " + userChecks
 					})
-					 
-				marker.setMap(map);
-				map.setCenter(marker.getPosition());
-				map.setZoom(8);
+				
 				InfoWindow(marker);
-				
-				//var infowindow = new google.maps.InfoWindow({
-				//	content: "Venue Name: " + venueName + "<br>" + "Number of Check-In's: " + checkIns + "<br>" + "Number of Users to Check-In Here: " + userChecks,
-				//	map: map,
-				//})
-				
-				//infowindow.open(map, marker);
 			}
-			
-			//function markInfo(map) {
-				
-			//}
 			
 			
 			function InfoWindow(marker) {
