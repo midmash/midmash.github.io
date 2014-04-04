@@ -28,7 +28,7 @@ function getVenue() {
 				InfoWindow(marker);	 
 				marker.setMap(map);
 				map.setCenter(marker.getPosition());
-				map.setZoom(8);
+				map.setZoom(10);
 				
 			}
 			
@@ -36,7 +36,7 @@ function getVenue() {
 				var infoWindow = new google.maps.InfoWindow({
 					content: "Venue Name: " + venueName + "<br>" + "Number of Check-In's: " + checkIns + "<br>" + "Number of Users to Check-In Here: " + userChecks,
 					map: map,
-					position: marker.getPosition()
+					//position: marker.getPosition()
 				})
 				
 				new google.maps.event.addListener(marker, 'click', function() {
