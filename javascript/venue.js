@@ -47,6 +47,8 @@ function getVenue() {
 				//})
 			}
 			
+			google.maps.event.addDomListener(window, 'load');
+			
 			
 			//for marker in map:
 			
