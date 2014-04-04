@@ -24,11 +24,10 @@ function getVenue() {
         				title: "Venue Name: " + venueName + "\n" + "Number of Check-In's: " + checkIns + "\n" + "Number of Users to Check-In Here: " + userChecks
 					})
 					 
-				//InfoWindow(marker);	 
+				InfoWindow(marker.getPosition());	 
 				marker.setMap(map);
 				map.setCenter(marker.getPosition());
 				map.setZoom(15);
-				InfoWindow(marker);
 			}
 			
 			function InfoWindow(marker) {
