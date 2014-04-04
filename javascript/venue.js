@@ -28,10 +28,9 @@ function getVenue() {
 				marker.setMap(map);
 				map.setCenter(marker.getPosition());
 				map.setZoom(8);
+				InfoWindow(marker);
 				
 			}
-			
-			InfoWindow(marker);
 			
 			function InfoWindow(marker) {
 				var infoWindow = new google.maps.InfoWindow({
