@@ -25,12 +25,13 @@ function getVenue() {
         				title: "Venue Name: " + venueName + "\n" + "Number of Check-In's: " + checkIns + "\n" + "Number of Users to Check-In Here: " + userChecks
 					})
 					 
-				//InfoWindow(marker);
 				marker.setMap(map);
 				map.setCenter(marker.getPosition());
 				map.setZoom(8);
 				
 			}
+			
+			InfoWindow(marker);
 			
 			function InfoWindow(marker) {
 				var infoWindow = new google.maps.InfoWindow({
@@ -47,8 +48,7 @@ function getVenue() {
 				//	infoWindow.close();
 				//})
 			}
-			
-			InfoWindow(marker);
+
 			google.maps.event.addDomListener(window, 'load');
 			
 			
