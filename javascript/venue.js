@@ -1,3 +1,4 @@
+var marker;
 var venueName;
 var checkIns;
 var userChecks;
