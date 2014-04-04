@@ -24,7 +24,7 @@ function getVenue() {
         				title: "Venue Name: " + venueName + "\n" + "Number of Check-In's: " + checkIns + "\n" + "Number of Users to Check-In Here: " + userChecks
 					})
 					 
-				InfoWindow(marker.getPosition());	 
+				InfoWindow(marker);	 
 				marker.setMap(map);
 				map.setCenter(marker.getPosition());
 				map.setZoom(15);
@@ -35,6 +35,8 @@ function getVenue() {
 					content: "Venue Name: " + venueName + "<br>" + "Number of Check-In's: " + checkIns + "<br>" + "Number of Users to Check-In Here: " + userChecks,
 					map: map,
 				})
+				
+				marker.getPosition();
 				
 				new google.maps.event.addListener(marker, 'click', function() {
 					infoWindow.open(map, marker);
