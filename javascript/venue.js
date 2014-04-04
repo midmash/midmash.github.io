@@ -39,7 +39,7 @@ function getVenue() {
 				})
 				
 				new google.maps.event.addListener(marker, 'click', function() {
-					infoWindow.open(map, marker);
+					infoWindow.open(map, marker.getPosition());
 				})
 				
 				new google.maps.event.addListener(marker, 'click', function() {
