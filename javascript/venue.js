@@ -10,7 +10,6 @@ function getVenue() {
 		if (request.readyState == 4 && request.status==200);
 		{
 			var A = JSON.parse(request.responseText);
-			//console.log(A);
 			for (var i = 1; i < 11; i++) {
 				var lat = A["response"]["venues"][i]["location"]["lat"];
 				var lng = A["response"]["venues"][i]["location"]["lng"];
@@ -35,61 +34,22 @@ function getVenue() {
 			function InfoWindow(marker) {
 				var infoWindow = new google.maps.InfoWindow({
 					content: "Venue Name: " + venueName + "<br>" + "Number of Check-In's: " + checkIns + "<br>" + "Number of Users to Check-In Here: " + userChecks,
-					map: map,
-					//position: marker.getPosition()
+					//map: map,
 				})
 				
 				new google.maps.event.addListener(marker, 'click', function() {
 					infoWindow.open(map, marker);
 				})
 				
-				//new google.maps.event.addListener(marker, 'click', function() {
-				//	infoWindow.close();
-				//})
+				new google.maps.event.addListener(marker, 'click', function() {
+					infoWindow.close();
+				})
 			}
 
 			google.maps.event.addDomListener(window, 'load');
 			
-			
-			//for marker in map:
-			
-			//var infowindow = new google.maps.InfoWindow({
-			//		content: "Venue Name: " + venueName + "<br>" + "Number of Check-In's: " + checkIns + "<br>" + "Number of Users to Check-In Here: " + userChecks,
-			//		map: map
-			//		})
-			
-			//google.maps.event.addListener(marker, "mouseover", function(event) {
-			//	infowindow.open(map, marker);
-			//});
-			
-			//google.maps.event.addListener(marker, "mouseclose", function(event) {
-			//	infowindow.close(map, marker);
-			//});
 		}
 	}
 	request.open("GET",URL,true);
 	request.send();
 }
-
-			//infowindow.open(map, marker);
-			
-			//google.maps.event.addListener(marker, 'click', function(event) {
-    			//	map.setZoom(8);
-				//map.setCenter(marker.getPosition());
-			//	infowindow.open(map, marker);
-  					
-  					//document.getElementById("venue-recs").innerHTML = "Venue Name: " + "<br>" + venueName + "<br>" + "<br>" + "Number of Check-Ins: " + "<br>" + checkIns + "<br>" + "<br>" + "Number of Users to Check-In Here: " + "<br>" + userChecks;
-  			//	});
-  				
-  				
-			
-			
-				
-				/*google.maps.event.addListener(marker, "mouseover", function(event) {
-                            		this.setIcon(A["response"]["venues"][i]["stats"]["checkinsCount"]);
-                        	});
-
-                            	google.maps.event.addListener(marker, "mouseout", function(event) {
-                            		this.setIcon(A["response"]["venues"][i]["hereNow"]["count"]);
-                            	});*/
-			
