@@ -26,9 +26,6 @@ function getVenue() {
 				//	})
 					 
 				markInfo(map);
-				marker.setMap(map);
-				map.setCenter(marker.getPosition());
-				map.setZoom(8);
 				//InfoWindow(marker);
 				
 				//var infowindow = new google.maps.InfoWindow({
@@ -52,7 +49,9 @@ function getVenue() {
         				position: new google.maps.LatLng(lat, lng),
         				title: "Venue Name: " + venueName + "\n" + "Number of Check-In's: " + checkIns + "\n" + "Number of Users to Check-In Here: " + userChecks
 					})
-				
+				marker.setMap(map);
+				map.setCenter(marker.getPosition());
+				map.setZoom(8);
 				InfoWindow(marker);
 			}
 			
