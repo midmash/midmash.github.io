@@ -36,15 +36,13 @@ function getVenue() {
 					map: map,
 				})
 				
-				marker.getPosition();
-				
 				new google.maps.event.addListener(marker, 'click', function() {
 					infoWindow.open(map, marker);
 				})
 				
-				new google.maps.event.addListener(marker, 'click', function() {
-					infoWindow.close();
-				})
+				//new google.maps.event.addListener(marker, 'click', function() {
+				//	infoWindow.close();
+				//})
 			}
 
 			google.maps.event.addDomListener(window, 'load');
