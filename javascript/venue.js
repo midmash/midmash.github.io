@@ -34,7 +34,6 @@ function getVenue() {
 				var infoWindow = new google.maps.InfoWindow({
 					content: "Venue Name: " + venueName + "<br>" + "Number of Check-In's: " + checkIns + "<br>" + "Number of Guests: " + userChecks,
 					map: map,
-					minHeight: 300,
 				})
 				
 				new google.maps.event.addListener(marker, 'click', function() {
