@@ -32,7 +32,7 @@ function getVenue() {
 			
 			function InfoWindow(marker) {
 				var infoWindow = new google.maps.InfoWindow({
-					content: "Venue Name: " + venueName + "<br>" + "Number of Check-In's: " + checkIns + "<br>" + "Number of Users to Check-In Here: " + userChecks,
+					content: "Venue Name: " + venueName + "<br>" + "Number of Check-In's: " + checkIns + "<br>" + "Number of Users: " + userChecks,
 					map: map,
 					minHeight: 300,
 				})
