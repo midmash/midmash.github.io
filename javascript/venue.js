@@ -1,4 +1,7 @@
 var marker;
+var venueName;
+var checkIns;
+var userChecks;
 
 function getVenue() {
 	var request = new XMLHttpRequest();
