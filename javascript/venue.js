@@ -21,7 +21,7 @@ function getVenue() {
         			
         			var marker = new google.maps.Marker({
         				position: new google.maps.LatLng(lat, lng),
-        				title: "Venue Name: " + venueName + "\n" + "Number of Check-In's: " + checkIns + "\n" + "Number of Different Guests to Check-In Here: " + userChecks
+        				title: "Venue Name: " + venueName + "\n" + "Number of Check-In's: " + checkIns + "\n" + "Number of Guests: " + userChecks
 					})
 					 
 				InfoWindow(marker);	 
