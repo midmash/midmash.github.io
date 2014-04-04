@@ -22,12 +22,15 @@ function getVenue() {
         			var marker = new google.maps.Marker({
         				position: new google.maps.LatLng(lat, lng),
         				title: "Venue Name: " + venueName + "\n" + "Number of Check-In's: " + checkIns + "\n" + "Number of Users to Check-In Here: " + userChecks
-					 })
+					visible: true,
+					map: map,
+					clickable: true
+					})
 					 
 				marker.setMap(map);
 				map.setCenter(marker.getPosition());
 				map.setZoom(8);
-				//InfoWindow(marker, map);
+				InfoWindow(marker, map);
 				
 				//var infowindow = new google.maps.InfoWindow({
 				//	content: "Venue Name: " + venueName + "<br>" + "Number of Check-In's: " + checkIns + "<br>" + "Number of Users to Check-In Here: " + userChecks,
@@ -37,6 +40,11 @@ function getVenue() {
 				//infowindow.open(map, marker);
 			}
 			
+			//function markInfo(map) {
+				
+			//}
+			
+			
 			function InfoWindow(marker, map) {
 				var infoWindow = new google.maps.InfoWindow({
 					content: "Venue Name: " + venueName + "<br>" + "Number of Check-In's: " + checkIns + "<br>" + "Number of Users to Check-In Here: " + userChecks,
@@ -45,7 +53,7 @@ function getVenue() {
 				})
 				
 				new google.maps.event.addListener(marker, 'click', function(event) {
-					infoWindow.open(marker.get('map'), marker);
+					infoWindow.open(map, marker);
 				})
 				
 				new google.maps.event.addListener(marker, 'click', function(event) {
@@ -53,7 +61,6 @@ function getVenue() {
 				})
 			}
 			
-			InfoWindow(marker, map);
 			
 			//for marker in map:
 			
