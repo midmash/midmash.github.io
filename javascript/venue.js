@@ -10,7 +10,7 @@ function getVenue() {
 		if (request.readyState == 4 && request.status==200)
 		{
 			var A = JSON.parse(request.responseText);
-			console.log(A);
+			//console.log(A);
 			for (var i = 1; i < 11; i++) {
 				var lat = A["response"]["venues"][i]["location"]["lat"];
 				var lng = A["response"]["venues"][i]["location"]["lng"];
@@ -25,10 +25,11 @@ function getVenue() {
         				title: "Venue Name: " + venueName + "\n" + "Number of Check-In's: " + checkIns + "\n" + "Number of Guests: " + userChecks
 					})
 					 
-				InfoWindow(marker);	 
+				//InfoWindow(marker);	 
 				marker.setMap(map);
 				map.setCenter(marker.getPosition());
 				map.setZoom(15);
+				InfoWindow(marker);
 			}
 			
 			function InfoWindow(marker) {
@@ -41,9 +42,6 @@ function getVenue() {
 					infoWindow.open(map, marker);
 				})
 				
-				//new google.maps.event.addListener(marker, 'click', function() {
-				//	infoWindow.close();
-				//})
 			}
 
 			google.maps.event.addDomListener(window, 'load');
